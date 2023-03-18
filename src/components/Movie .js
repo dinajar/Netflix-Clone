@@ -5,13 +5,7 @@ import { useState } from 'react';
 import ModalMovie from './ModalMovie'
 
 function Movie(props) {
-    /*const addMovie = () => {
-      props.AddToFavorites({
-        name: props.name,
-        image: 'https://image.tmdb.org/t/p/w500' + props.src,
-        overview: props.overview
-      });
-    };*/
+    
     const [showFlag, setShowFlag] = useState(false);
     const handleShow = (item) => {
         setShowFlag(true);

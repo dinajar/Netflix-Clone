@@ -17,7 +17,7 @@ function FavList() {
 
 
   const sendReq = async () => {
-    const serverURL = 'http://localhost:3001/getMovies';
+    const serverURL = `${process.env.REACT_APP_serverURL}/getMovies`;
     const resdata = await axios(serverURL);
     setmovList(resdata.data);
 
@@ -47,7 +47,7 @@ function FavList() {
 
   const deleteArr = async (movie ,e)=>{
     e.preventDefault();
-    const serverURL = `http://localhost:3001/delete/${movie.id}`;
+    const serverURL = `${process.env.REACT_APP_serverURL}/delete/${movie.id}`;
         const axiosRes = await axios.delete(serverURL);
         console.log(axiosRes.data);
         setmovList(axiosRes.data);

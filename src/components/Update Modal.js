@@ -13,7 +13,7 @@ function UpdateModal(props) {
             overview : e.target.overview.value,
             comment : e.target.comment.value
         }
-        const serverURL = `http://localhost:3001/update/${props.cardValues.id}`;
+        const serverURL = `${process.env.REACT_APP_serverURL}/update/${props.cardValues.id}`;
         const axiosRes = await axios.put(serverURL,obj);
         console.log(axiosRes.data);
         props.takeNewArr(axiosRes.data);

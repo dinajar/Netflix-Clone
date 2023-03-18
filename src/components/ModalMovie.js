@@ -17,7 +17,7 @@ function ModalMovie(props) {
   //const [addMovie, setaddMovie] = useState([]);
 
   const sendReq = async () => {
-    const serverURL = `http://localhost:3001/addMovie`;
+    const serverURL = `${process.env.REACT_APP_serverURL}/addMovie`;
     const obj = {
       name: props.name,
       poster_path: `https://image.tmdb.org/t/p/w500${props.src}`,

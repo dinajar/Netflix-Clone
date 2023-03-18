@@ -7,7 +7,7 @@ import axios from 'axios';
 function Home(){
     const [movList , setmovList] = useState([]);
     const sendReq = async ()=>{
-        const serverURL ='http://localhost:3001/trending';
+        const serverURL =`${process.env.REACT_APP_serverURL}/trending`;
         const resdata = await axios(serverURL);
         console.log(resdata.data);
         setmovList(resdata.data);
