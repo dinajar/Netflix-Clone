@@ -6,6 +6,7 @@ import Navbar from 'react-bootstrap/Navbar';
 function Navbbar() {
     return (
         <>
+
             <Navbar bg="black" variant="dark">
                 <Container>
                     <Navbar.Brand href="#home" style={{color:"#BE3144", fontSize:"60px" , fontFamily:"Itim"}}> Movie  </Navbar.Brand>
