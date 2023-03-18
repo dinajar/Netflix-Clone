@@ -17,3 +17,11 @@ function Home(){
     useEffect(()=>{
         sendReq();
     },[])
+
+    return (
+        <div  className='home'>
+           <MovieList  data={movList}/> 
+        </div>
+    )
+}
+export default Home;
