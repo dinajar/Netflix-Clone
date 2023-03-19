@@ -13,20 +13,18 @@ function ModalMovie(props) {
   const handleChange = (event) => {
     setComment(event.target.value);
   };
+  const handleFavList = () => {
 
-  //const [addMovie, setaddMovie] = useState([]);
+  };
+  const [addMovie, setaddMovie] = useState([]);
 
   const sendReq = async () => {
-    const serverURL = `${process.env.REACT_APP_serverURL}/addMovie`;
-    const obj = {
+      const resdata = await axios.post('http://movies-library-production-fa39.up.railway.app/addMovie', {
       name: props.name,
       poster_path: `https://image.tmdb.org/t/p/w500${props.src}`,
       overview: props.overview,
       comment: comment
-    }
-    const resdata = await axios.post(serverURL, obj);
-    props.handleclose();
-    console.log(resdata);
+    });
   }
 
   return (

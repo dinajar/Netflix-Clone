@@ -10,7 +10,7 @@ function MovieList(props) {
     };*/
 
     return (
-        <Row xs={1} md={4} className="g-4" style={{ backgroundColor: 'black' }}>
+        <Row xs={1} md={4} className="g-4">
             {props.data.map((item) => {
                 return <Movie src={item.poster_path} name={item.name} overview={item.overview} key={item.id} />;
             })}
