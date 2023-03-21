@@ -7,6 +7,7 @@ function FavList(){
 
     const [movList , setmovList] = useState([]);
     const sendReq = async ()=>{
+      
         const serverURL ='http://movies-library-production-fa39.up.railway.app/getMovies';
         const resdata = await axios(serverURL);
         console.log(resdata.data);
