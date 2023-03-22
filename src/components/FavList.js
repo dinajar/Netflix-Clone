@@ -1,14 +1,13 @@
 import { useEffect, useState } from "react";
 import axios from 'axios';
 import Card from 'react-bootstrap/Card';
-
+import Col from 'react-bootstrap/Col';
 
 function FavList(){
 
     const [movList , setmovList] = useState([]);
     const sendReq = async ()=>{
-      
-        const serverURL ='http://movies-library-production-fa39.up.railway.app/getMovies';
+        const serverURL =`http://movies-library-production-fa39.up.railway.app/getMovies`;
         const resdata = await axios(serverURL);
         console.log(resdata.data);
         setmovList(resdata.data);
@@ -28,7 +27,7 @@ function FavList(){
                <Card.Body>
                  <Card.Title>{movie.name}</Card.Title>
                  <Card.Text>{movie.overview}</Card.Text>
-                 <Card.Text>{movie.comment}</Card.Text>
+                 <Card.Text>{movList.comment}</Card.Text>
                </Card.Body>
              </Card>
            </div>

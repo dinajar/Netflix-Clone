@@ -31,7 +31,7 @@ function Movie(props) {
                         <Card.Title>{props.name}</Card.Title>
                         <Card.Text>{props.overview}</Card.Text>
                         <Button variant="primary" onClick={handleShow}>
-                            MORE
+                            Add to Favorites
                         </Button>
                     </Card.Body>
                 </Card>

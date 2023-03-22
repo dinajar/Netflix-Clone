@@ -6,7 +6,7 @@ import axios from 'axios';
 function Home(){
     const [movList , setmovList] = useState([]);
     const sendReq = async ()=>{
-        const serverURL ='http://movies-library-production-fa39.up.railway.app/trending';
+        const serverURL =`http://movies-library-production-fa39.up.railway.app/trending`;
         const resdata = await axios(serverURL);
         console.log(resdata.data);
         setmovList(resdata.data);
